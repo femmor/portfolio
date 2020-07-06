@@ -16084,4 +16084,9 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle{
     word-break:break-all
 }
 /*# sourceMappingURL=theme.min.css.map */
- 
+
+
+/* Custom Styles */
+.landing-section {
+    background-color: var(--indigo)
+}
