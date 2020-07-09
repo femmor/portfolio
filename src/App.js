@@ -1,20 +1,15 @@
 import React, { Component } from 'react';
-import './App.css';
 import { Switch, Route } from "react-router-dom"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Components
-import Landing from "./components/Landing"
-import Footer from "./components/Footer/Footer"
+import Homepage from './components/Homepage';
 
 class App extends Component {
   render() {
     return (
       <Switch>
-          <Route>
-            <Landing />
-            <Footer />
-          </Route>
-          
+          <Route exact path="/" component={Homepage}/>
       </Switch>
     );
   }
