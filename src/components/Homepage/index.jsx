@@ -6,6 +6,7 @@ import PageBg from "../../images/pattern.png"
 import PageTop from "../PageTop"
 import About from '../About';
 import Experience from '../Experience';
+import Footer from "../Footer/Footer"
 
 const Homepage = () => {
     return (
@@ -17,6 +18,7 @@ const Homepage = () => {
                 <PageTop/>
                 <About/>
                 <Experience/>
+                <Footer/>
             </HomepageWrapper>
         </>
     )

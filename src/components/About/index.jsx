@@ -70,20 +70,6 @@ const AboutWrapper = styled.div`
         padding-bottom: 0.5em;
     }
 
-    .cta .cta-button {
-		color: #5b3263;
-		text-transform: uppercase;
-		border: 2px solid #5b3263;
-		border-radius: 50px;
-		background: white;
-    }
-
-    .cta .cta-button:hover, .cta .cta-button:focus {
-            box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 14px 1px rgba(0, 0, 0, 0.15);
-            background-color: #5b3263;
-            color: white;
-    }
-
     span.my__name {
         font-family: 'Dancing Script', cursive;
         color: #b83b5e;
