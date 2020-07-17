@@ -12,7 +12,7 @@ const About = () => {
                 <div className="about">
                     <div className="container">
                         <div className="row">
-                            <div class="col-10 col-sm-12 mx-auto text-center my-3">
+                            <div className="col-10 col-sm-12 mx-auto text-center my-3">
                                 <img className="img-responsive rounded-circle" src={Headshot} alt="headshot" />
                                 <div className="details">
                                     <h3>Hi, I'm <span className="my__name">Emmanuel</span> I...

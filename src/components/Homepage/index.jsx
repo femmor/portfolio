@@ -1,29 +1,38 @@
-import React from 'react';
+import React, {Component} from 'react';
 import styled from "styled-components"
 import PageBg from "../../images/pattern.png"
+import {data} from "../../data"
 
 // Components
 import PageTop from "../PageTop"
 import About from '../About';
-import Experience from '../Experience';
+import Skills from '../Skills';
+import Portfolio from '../Portfolio';
 import HireMe from '../HireMe';
 import Footer from "../Footer/Footer"
 
-const Homepage = () => {
-    return (
-        <>
-            <HomepageWrapper style={{
-                backgroundImage: `url(${PageBg})`,
-                backgroundAttachment: "fixed"
-            }}>
-                <PageTop/>
-                <About/>
-                <Experience/>
-                <HireMe/>
-                <Footer/>
-            </HomepageWrapper>
-        </>
-    )
+
+
+class Homepage extends Component {    
+    
+    render() {
+
+        return (
+            <>
+                <HomepageWrapper style={{
+                    backgroundImage: `url(${PageBg})`,
+                    backgroundAttachment: "fixed"
+                }}>
+                    <PageTop/>
+                    <About/>
+                    <Skills/>
+                    <Portfolio/>
+                    <HireMe/>
+                    <Footer/>
+                </HomepageWrapper>
+            </>
+        )
+    }
 }
 
 const HomepageWrapper = styled.div`

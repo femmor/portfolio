@@ -11,7 +11,7 @@ const Experience = () => {
                 <div className="container">
                 <div className="row py-5">
                     <div className="col text-white">
-                        <h2 className="text-center">My Experience</h2>
+                        <h2 className="text-center">My Skills</h2>
                         <p className="text-center tag-line">Specialist in need. Generalist at heart.</p>
                     </div>
                 </div>
