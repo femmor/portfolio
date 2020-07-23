@@ -26,3 +26,14 @@ h1, h2, h3, h4, h5, h6 {
 .portfolio-bg {
 	background: white
 }
+
+.btn-outline-primary {
+	color: #5b3263 !important;
+	border-color: #5b3263 !important;
+}
+
+.btn-outline-primary:hover {
+	color: #fff !important;
+	border-color: #5b3263 !important;
+	background: #5b3263 !important;
+}

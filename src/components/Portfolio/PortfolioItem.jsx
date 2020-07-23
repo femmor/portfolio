@@ -1,36 +1,39 @@
 import React from 'react';
+import { Link } from "react-router-dom"
 import {FaChevronRight} from "react-icons/fa"
 
-const PortfolioItem = () => {
+const PortfolioItem = ({ portfolio }) => {
     return (
         <>
-            <div className="col-md-6 col-lg-4">
-                <div className="card">
-                    <img className="card-img-top" src="../assets/images/demo/image-square-4.jpg" alt="Card image cap" />
-                    <div className="card-body">
-                    <a href="" className="eyebrow mb-1">Design</a>
-                    <h4 className="card-title mb-0"><a href="">Planning amazing weddings that you won’t forget.</a></h4>
-                    </div>
-                    <div className="card-footer">
-                    <div className="row align-items-center">
-                        <div className="col-8">
-                        <a href="" className="btn btn-rounded btn-outline-primary">
-                            <FaChevronRight/>
-                        </a>
+            { 
+                portfolio.map(item => {
+                    const { id, image, project_name, project_link, project_desc, tags } = item
+                    return (
+                        <div key={id}className="col-md-6 col-lg-4 my-3">
+                        <div className="card">
+                            <img className="card-img-top" src={image} alt="project image"/>
+                            <div className="card-body">
+                                <h4 className="card-title mb-2">{project_name}</h4>
+                                <p>{project_desc}</p>
+                                <h6 className="text-muted">Technologies</h6>
+                                { tags.map(tag => (
+                                    <span class="badge badge-dark mr-2">{tag}</span>
+                                ))}
+                            </div>
+                            <div className="card-footer">
+                            <div className="row align-items-center">
+                                <div className="col-8">
+                                    <a href={project_link} target="_blank" className="btn btn-rounded btn-outline-primary">
+                                        <FaChevronRight/>
+                                    </a>
+                                </div>
+                            </div>
+                            </div>
                         </div>
-                        <div className="col-4 text-right">
-                        <ul className="list-inline mb-0">
-                            <li className="list-inline-item">
-                                <a href="#">
-                                    
-                                </a>
-                            </li>
-                        </ul>
-                        </div>
                     </div>
-                    </div>
-                </div>
-            </div>
+                    )
+                })
+            }
         </>
     );
 }

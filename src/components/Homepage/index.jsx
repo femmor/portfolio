@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import styled from "styled-components"
 import PageBg from "../../images/pattern.png"
-import {data} from "../../data"
+import { portfolioData } from "../../data"
 
 // Components
 import PageTop from "../PageTop"
@@ -14,9 +14,12 @@ import Footer from "../Footer/Footer"
 
 
 class Homepage extends Component {    
-    
-    render() {
+    state = {
+        data: portfolioData
+    }
 
+    render() {
+        
         return (
             <>
                 <HomepageWrapper style={{
@@ -26,7 +29,7 @@ class Homepage extends Component {
                     <PageTop/>
                     <About/>
                     <Skills/>
-                    <Portfolio/>
+                    <Portfolio data={this.state.data}/>
                     <HireMe/>
                     <Footer/>
                 </HomepageWrapper>
