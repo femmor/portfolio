@@ -14,7 +14,7 @@ const HireMe = () => {
                             <div className="col text-white cta"> 
                                 <h2>Wanna work with me?</h2>
                                 <p className="text-center">I'm currently available for work.</p>
-                                <a className="btn cta-button" href="mailto:fegomson@gmail.com">Hire me</a>
+                                <a className="btn cta-button" href="mailto:fegomson@gmail.com">Hire me</a> <a className="btn cta-button" href="./resume.pdf" target="_blank">Download CV</a>
                             </div>
                         </div>
                     </div>

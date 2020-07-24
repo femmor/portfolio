@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from "styled-components"
-import {FaLaptopCode, FaDatabase, FaTools, FaHtml5, FaCss3, FaBootstrap, FaReact, FaNodeJs, FaNpm, FaGulp, FaGithub, FaUserShield } from "react-icons/fa"
+import {FaLaptopCode, FaDatabase, FaTools, FaHtml5, FaCss3, FaBootstrap, FaReact, FaNodeJs, FaNpm, FaGulp, FaGithub, FaUserShield, FaWordpress } from "react-icons/fa"
 import {IoLogoJavascript} from "react-icons/io"
 import {DiJqueryLogo, DiMongodb, DiBower, DiFirebase} from "react-icons/di"
+import {RiSecurePaymentLine} from "react-icons/ri"
+
 
 const Experience = () => {
     return (
@@ -36,7 +38,8 @@ const Experience = () => {
                             <li><FaNpm/> NPM</li>
                             <li><DiMongodb/> MongoDB</li>
                             <li><DiFirebase/> Firebase</li>
-                            <li>Restful Web Services</li>
+                            <li><FaWordpress/> Wordpress</li>
+                            <li><RiSecurePaymentLine/> Payment Gateway Integration</li>
                         </ul>
                     </div>
                     <div className="col-4 text-center">
@@ -47,6 +50,7 @@ const Experience = () => {
                             <li><DiBower/> Bower</li>
                             <li><FaGithub/> Github && Bitbucket</li>
                             <li><FaUserShield/> SSH</li>
+                            <li>Restful Web APIs</li>
                         </ul>
                     </div>
                 </div>

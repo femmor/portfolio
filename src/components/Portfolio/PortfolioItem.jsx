@@ -24,7 +24,7 @@ const PortfolioItem = ({ portfolio }) => {
                             <div className="row align-items-center">
                                 <div className="col-8">
                                     <a href={project_link} target="_blank" className="btn btn-rounded btn-outline-primary">
-                                        <FaChevronRight/>
+                                        Check it out <FaChevronRight/>
                                     </a>
                                 </div>
                             </div>
