@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from "react-router-dom"
+import {Link} from "react-router-dom"
 import {FaChevronRight} from "react-icons/fa"
 
 const PortfolioItem = ({ portfolio }) => {
@@ -11,21 +11,21 @@ const PortfolioItem = ({ portfolio }) => {
                     return (
                         <div key={id}className="col-md-6 col-lg-4 my-3">
                         <div className="card">
-                            <img className="card-img-top" src={image} alt="project image"/>
+                            <img className="card-img-top" src={image} alt="portfolio"/>
                             <div className="card-body">
                                 <h4 className="card-title mb-2">{project_name}</h4>
                                 <p>{project_desc}</p>
                                 <h6 className="text-muted">Technologies</h6>
                                 { tags.map(tag => (
-                                    <span class="badge badge-dark mr-2">{tag}</span>
+                                    <span key={tag} className="badge badge-dark mr-2">{tag}</span>
                                 ))}
                             </div>
                             <div className="card-footer">
                             <div className="row align-items-center">
                                 <div className="col-8">
-                                    <a href={project_link} target="_blank" className="btn btn-rounded btn-outline-primary">
+                                    <Link to={project_link} className="btn btn-rounded btn-outline-primary">
                                         Check it out <FaChevronRight/>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                             </div>

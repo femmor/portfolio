@@ -1,5 +1,6 @@
 import React from 'react';
 import "../../App.css"
+import {Link} from "react-router-dom"
 import styled from "styled-components"
 import {FaGithubAlt} from "react-icons/fa"
 import Typing from 'react-typing-animation';
@@ -33,7 +34,7 @@ const About = () => {
                                     <a className="btn cta-button" href="mailto:fegomson@gmail.com">Get In Touch</a>
                                 </div>
                                 <div className="my-arrow-div text-center my-3">
-                                    <span className="github__text">Find me on</span> <a href="https://github.com/femmor" target="_blank"><FaGithubAlt className="github__icon"/> </a>
+                                    <span className="github__text">Find me on</span> <Link to="https://github.com/femmor"><FaGithubAlt className="github__icon"/> </Link>
                                 </div>
                             </div>
                         </div>

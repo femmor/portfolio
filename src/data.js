@@ -79,5 +79,21 @@ export const portfolioData = [
         image: "./images/corotracker.jpg",
         tags: ["React", "NodeJS", "Data API", "ChartJS", "React CountDown", "Netlify", "Express"]
     },
+    {
+        id: 11,
+        project_name: "Breaking Bad Cast",
+        project_link: "https://brebad.netlify.app",
+        project_desc: "A search and display application using the breaking bad API",
+        image: "./images/bbad.jpg",
+        tags: ["React", "Breaking Bad API", "React Hooks - useState & useEffect", "Axios","Netlify"]
+    },
+    {
+        id: 12,
+        project_name: "Kanban UI",
+        project_link: "https://tailwind-kanban.netlify.app/",
+        project_desc: "Tailwind CSS Kanban UI",
+        image: "./images/kanban.png",
+        tags: ["HTML", "Tailwind CSS", "Netlify"]
+    },
     
 ]

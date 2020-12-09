@@ -6,7 +6,7 @@ import Logo from "../../images/logo.svg"
 import styled from "styled-components"
 
 const Footer = () => {
-    const date = new Date
+    const date = new Date()
     const year = date.getFullYear()
 
     return (
