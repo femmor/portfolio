@@ -5,7 +5,7 @@ import {FaChevronRight} from "react-icons/fa"
 const PortfolioItem = ({ portfolio }) => {
     return (
         <>
-            { 
+            {
                 portfolio.map(item => {
                     const { id, image, project_name, project_link, project_desc, tags } = item
                     return (
@@ -23,9 +23,9 @@ const PortfolioItem = ({ portfolio }) => {
                             <div className="card-footer">
                             <div className="row align-items-center">
                                 <div className="col-8">
-                                    <Link to={project_link} className="btn btn-rounded btn-outline-primary">
+                                    <a href={project_link} target="_blank" className="btn btn-rounded btn-outline-primary">
                                         Check it out <FaChevronRight/>
-                                    </Link>
+                                    </a>
                                 </div>
                             </div>
                             </div>
