@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from "react-router-dom"
 import {FaChevronRight} from "react-icons/fa"
 
 const PortfolioItem = ({ portfolio }) => {
@@ -23,7 +22,7 @@ const PortfolioItem = ({ portfolio }) => {
                             <div className="card-footer">
                             <div className="row align-items-center">
                                 <div className="col-8">
-                                    <a href={project_link} target="_blank" className="btn btn-rounded btn-outline-primary">
+                                    <a href={project_link} target="_blank" rel="noopener noreferrer" className="btn btn-rounded btn-outline-primary">
                                         Check it out <FaChevronRight/>
                                     </a>
                                 </div>

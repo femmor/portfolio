@@ -33,11 +33,11 @@ export const portfolioData = [
     },
     {
         id: 5,
-        project_name: "GitJobs",
-        project_link: "https://gitjobs.netlify.app",
-        project_desc: "Github API job portal",
-        image: "./images/gitjobs.jpg",
-        tags: ["React", "NodeJS", "Github API", "React-Bootstrap", "Markdown", "Netlify", "Express"]
+        project_name: "English Skill Test",
+        project_link: "https://skilltest.oaastudy.com",
+        project_desc: "An English skill test platform for IELTS and PTE Exams",
+        image: "./images/skilltest.png",
+        tags: ["Wordpress", "Bootstrap UI Framework", "Elementor Page Builder", "PHP", "MySQL"]
     },
     {
         id: 6,
