@@ -11,6 +11,7 @@ import {
 import './bootstrap.min.css';
 import './index.css';
 import { About, Contact, Home, Projects } from './pages';
+import { StoreProvider } from './Store';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -29,6 +30,8 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <StoreProvider>
+      <RouterProvider router={router} />
+    </StoreProvider>
   </React.StrictMode>
 );

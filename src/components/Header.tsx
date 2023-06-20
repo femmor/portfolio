@@ -1,21 +1,29 @@
-import { useEffect, useState } from 'react';
-import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import { FC, useContext } from 'react';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Link, useLocation } from 'react-router-dom';
 
 import { BsSun, TbMoonFilled } from '../utils/icons';
+import { Store } from '../Store';
 
-const Header = () => {
+type HeaderProps = {
+  modeSwitchHandler: () => void;
+};
+
+const Header: FC<HeaderProps> = ({ modeSwitchHandler }) => {
+  const { state } = useContext(Store);
+  const { mode } = state;
+
   const location = useLocation();
-
-  console.log(location.pathname);
 
   return (
     <header>
-      <Navbar expand='lg' className='bg-body-tertiary'>
+      <Navbar expand='lg' variant={mode} bg={mode}>
         <Container>
           <LinkContainer to='/'>
-            <Navbar.Brand className='text-primary'>
+            <Navbar.Brand
+              className={mode === 'light' ? 'text-primary' : ''}
+            >
               Emmanuel Egomson
             </Navbar.Brand>
           </LinkContainer>
@@ -62,12 +70,21 @@ const Header = () => {
               >
                 Contact
               </Link>
-              <span className='sun nav-link'>
-                <BsSun size={22} color='orange' />
-              </span>
-              <span className='moon nav-link'>
-                <TbMoonFilled size={22} color='yellow' />
-              </span>
+              {mode === 'light' ? (
+                <span
+                  className='sun nav-link'
+                  onClick={modeSwitchHandler}
+                >
+                  <BsSun size={22} color='orange' />
+                </span>
+              ) : (
+                <span
+                  className='moon nav-link'
+                  onClick={modeSwitchHandler}
+                >
+                  <TbMoonFilled size={22} color='yellow' />
+                </span>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>

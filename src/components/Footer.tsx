@@ -1,20 +1,30 @@
+import { useContext } from 'react';
 import { BsGithub, BsLinkedin } from '../utils/icons';
 import { Link } from 'react-router-dom';
+import { Store } from '../Store';
 
 const Footer = () => {
+  const { state } = useContext(Store);
+  const { mode } = state;
   const year = new Date().getFullYear();
 
   return (
     <footer className='container my-3'>
       <p className='d-flex flex-row justify-content-center gap-2'>
         <Link to='https://github.com/femmor' target='_blank'>
-          <BsGithub size={24} color='#000' />
+          <BsGithub
+            size={24}
+            color={mode === 'light' ? '#444' : '#fff'}
+          />
         </Link>
         <Link
           to='https://www.linkedin.com/in/emmanuel-egomson-9b344319b'
           target='_blank'
         >
-          <BsLinkedin size={24} color='#2781db' />
+          <BsLinkedin
+            size={24}
+            color={mode === 'light' ? '#2781db' : '#fff'}
+          />
         </Link>
       </p>
       <hr />
