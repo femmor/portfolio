@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Link, useLocation } from 'react-router-dom';
+
+import { BsSun, TbMoonFilled } from '../utils/icons';
 
 const Header = () => {
   const location = useLocation();
@@ -60,6 +62,12 @@ const Header = () => {
               >
                 Contact
               </Link>
+              <span className='sun nav-link'>
+                <BsSun size={22} color='orange' />
+              </span>
+              <span className='moon nav-link'>
+                <TbMoonFilled size={22} color='yellow' />
+              </span>
             </Nav>
           </Navbar.Collapse>
         </Container>

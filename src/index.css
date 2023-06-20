@@ -23,7 +23,7 @@ a.nav-link {
   color: #a1a1a1 !important;
 }
 
-.nav-link::after {
+.nav-link::after:not(.mode-switcher) {
     content: '' !important;
     display: block !important;
     width: 0 !important;
@@ -32,6 +32,43 @@ a.nav-link {
     transition: width .3s !important;
 }
 
-.nav-link:hover::after {
+.nav-link:hover::after:not(.sun, .moon) {
     width: 100% !important;
+}
+.sun {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sun:hover {
+  border: orange 1px solid;
+  border-radius: 50%;
+
+}
+
+.moon {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.moon:hover {
+  border: yellow 1px solid;
+  border-radius: 50%;
+}
+
+main {
+  height: 100vh;
+}
+
+@media screen and (max-width: 768px) {
+  .moon:hover {
+    border: none
+  }
+  .sun:hover {
+    border: none
+  }
 }
