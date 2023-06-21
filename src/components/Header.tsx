@@ -75,14 +75,14 @@ const Header: FC<HeaderProps> = ({ modeSwitchHandler }) => {
                   className='sun nav-link'
                   onClick={modeSwitchHandler}
                 >
-                  <BsSun size={22} color='orange' />
+                  <BsSun size={20} color='orange' />
                 </span>
               ) : (
                 <span
                   className='moon nav-link'
                   onClick={modeSwitchHandler}
                 >
-                  <TbMoonFilled size={22} color='yellow' />
+                  <TbMoonFilled size={20} color='yellow' />
                 </span>
               )}
             </Nav>
