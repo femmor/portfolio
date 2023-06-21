@@ -10,7 +10,7 @@ const Footer = () => {
 
   return (
     <footer className='container my-3'>
-      <p className='d-flex flex-row justify-content-center gap-2'>
+      <p className='d-flex flex-row justify-content-center gap-2 my-4'>
         <Link to='https://github.com/femmor' target='_blank'>
           <BsGithub
             size={24}

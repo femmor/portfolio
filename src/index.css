@@ -1,12 +1,25 @@
+:root {
+  --color-bg: #000000;
+  --color-fg: #ffffff;
+  --primary-color: #325d88;
+  --secondary-color: #a1a1a1;
+  --main-orange: orange;
+  --main-yellow: #f9ca24;
+}
+
 body {
-  font-family: "Roboto", sans-serif;
+font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 h1, h2, h3, h4 {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Montserrat', sans-serif;
+}
+
+button > a {
+  text-decoration: none;
 }
 
 nav {
@@ -16,11 +29,12 @@ nav {
 }
 
 a.active.nav-link {
-  color: #325d88 !important;
+  color: var(--primary-color) !important;
 }
 
 a.nav-link {
-  color: #a1a1a1 !important;
+  color: var(--secondary-color) !important;
+  font-size: 16px !important;
 }
 
 .nav-link::after:not(.mode-switcher) {
@@ -28,7 +42,7 @@ a.nav-link {
     display: block !important;
     width: 0 !important;
     height: 2px !important;
-    background: #325d88 !important;
+    background: var(--primary-color) !important;
     transition: width .3s !important;
 }
 
@@ -43,7 +57,7 @@ a.nav-link {
 }
 
 .sun:hover {
-  border: orange 1px solid;
+  border: var(--main-orange) 1px solid;
   border-radius: 50%;
 
 }
@@ -56,12 +70,68 @@ a.nav-link {
 }
 
 .moon:hover {
-  border: yellow 1px solid;
+  border: var(--main-yellow) 1px solid;
   border-radius: 50%;
 }
 
 main {
   height: 100vh;
+}
+
+.small-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.profile-img {
+  width: 180px;
+  height: 180px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-img-dark {
+  width: 180px;
+  height: 180px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  object-fit: cover;
+ box-shadow: 0px -38px 134px -8px rgba(255,255,247,0.7);
+-webkit-box-shadow: 0px -38px 134px -8px rgba(255,255,247,0.7);
+-moz-box-shadow: 0px -38px 134px -8px rgba(255,255,247,0.7);
+filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+  filter: grayscale(1);
+}
+
+h1.title {
+  font-size: 58px;
+  font-weight: 600;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+
+.title span {
+  font-family: 'Dancing Script', cursive;
+  font-size: 70px;
+}
+
+.desc {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.hire-me:hover {
+  color: #ffffff;
+}
+
+button a {
+  font-size: 19px;
+  font-weight: 400;
 }
 
 @media screen and (max-width: 768px) {
@@ -70,5 +140,16 @@ main {
   }
   .sun:hover {
     border: none
+  }
+  h1.title {
+    font-size: 38px;
+    font-weight: 500;
+  }
+  .title span {
+    font-size: 50px;
+  }
+
+  .desc {
+    font-size: 14px;
   }
 }
